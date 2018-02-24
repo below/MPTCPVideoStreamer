@@ -12,6 +12,7 @@
 		CB03E6B1204160310008660F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB03E6AF204160310008660F /* Main.storyboard */; };
 		CB03E6B3204160310008660F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB03E6B2204160310008660F /* Assets.xcassets */; };
 		CB03E6B6204160310008660F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB03E6B4204160310008660F /* LaunchScreen.storyboard */; };
+		CB03E6BF204161090008660F /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB03E6BE204161090008660F /* AVKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,8 @@
 		CB03E6B2204160310008660F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB03E6B5204160310008660F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB03E6B7204160310008660F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB03E6BE204161090008660F /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		CB03E6C0204171C70008660F /* Videotest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Videotest.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB03E6BF204161090008660F /* AVKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +44,7 @@
 			children = (
 				CB03E6AA204160310008660F /* Videotest */,
 				CB03E6A9204160310008660F /* Products */,
+				CB03E6BD204161090008660F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +59,7 @@
 		CB03E6AA204160310008660F /* Videotest */ = {
 			isa = PBXGroup;
 			children = (
+				CB03E6C0204171C70008660F /* Videotest.entitlements */,
 				CB03E6AB204160310008660F /* AppDelegate.swift */,
 				CB03E6AD204160310008660F /* ViewController.swift */,
 				CB03E6AF204160310008660F /* Main.storyboard */,
@@ -62,6 +68,14 @@
 				CB03E6B7204160310008660F /* Info.plist */,
 			);
 			path = Videotest;
+			sourceTree = "<group>";
+		};
+		CB03E6BD204161090008660F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CB03E6BE204161090008660F /* AVKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -97,6 +111,11 @@
 					CB03E6A7204160310008660F = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Multipath = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -274,6 +293,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Videotest/Videotest.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M3DTZN9V9B;
 				INFOPLIST_FILE = Videotest/Info.plist;
@@ -281,7 +301,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.vonbelow.Videotest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -289,6 +309,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Videotest/Videotest.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M3DTZN9V9B;
 				INFOPLIST_FILE = Videotest/Info.plist;
@@ -296,7 +317,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.vonbelow.Videotest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
